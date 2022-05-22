@@ -1,22 +1,27 @@
 import styles from "./shopitem.module.css";
 import { useContext } from "react";
 import { UserContext } from "../../../../usercontext";
+import { useState } from "react";
 
-function ShopItem({ shopActive, name, cost, desc }) {
+function ShopItem({ shopActive, upgrade }) {
   const { user, setUser } = useContext(UserContext);
+  const [upgradeNumber, setUpgradeNumber] = useState(0);
   function handleClick() {
     if (
-      user.resources.wood >= cost.wood &&
-      user.resources.stone >= cost.stone
+      user.resources.wood >= upgrade[upgradeNumber].upgradeCost.wood &&
+      user.resources.stone >= upgrade[upgradeNumber].upgradeCost.stone
     ) {
       setUser({
         ...user,
         resources: {
           ...user.resources,
-          wood: user.resources.wood - cost.wood,
-          stone: user.resources.stone - cost.stone,
+          wood: user.resources.wood - upgrade[upgradeNumber].upgradeCost.wood,
+          stone:
+            user.resources.stone - upgrade[upgradeNumber].upgradeCost.stone,
         },
       });
+      upgrade[upgradeNumber].upgradeFunction();
+      setUpgradeNumber(upgradeNumber + 1);
     }
     return;
   }
@@ -24,17 +29,18 @@ function ShopItem({ shopActive, name, cost, desc }) {
   return (
     <div
       className={
-        user.resources.wood >= cost.wood && user.resources.stone >= cost.stone
+        user.resources.wood >= upgrade[upgradeNumber].upgradeCost.wood &&
+        user.resources.stone >= upgrade[upgradeNumber].upgradeCost.stone
           ? styles.canbuy
           : styles.cannotbuy
       }
       id={shopActive ? styles.active : styles.inactive}
       onClick={handleClick}
     >
-      <p className={styles.name}>{name}</p>
-      <p className={styles.price}>{cost.wood}</p>
-      <p className={styles.price}>{cost.stone}</p>
-      <p className={styles.price}>{desc}</p>
+      <h4>{upgrade[upgradeNumber].upgradeName}</h4>
+      <p>{upgrade[upgradeNumber].upgradeCost.wood}</p>
+      <p>{upgrade[upgradeNumber].upgradeCost.stone}</p>
+      <p>{upgrade[upgradeNumber].upgradeDesc}</p>
     </div>
   );
 }

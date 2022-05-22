@@ -1,24 +1,39 @@
+import { useContext } from "react";
+import { UserContext } from "../../usercontext";
+
 export const toolupgrades = [
   [
     {
-      upgradeName: "Sharper Axes",
-      upgradeCost: { wood: 20, stone: 20 },
-      upgradeDesc: "Sharpen all axes.",
+      upgradeName: "Sharp Axes",
+      upgradeCost: { wood: 50, stone: 50 },
+      upgradeDesc: "Something goes here",
+      upgradeFunction: improveSkill,
     },
+
     {
-      upgradeName: "Razer-Sharp Axes",
-      upgradeCost: { wood: 100, stone: 80 },
-      upgradeDesc: "Sharpen all axes.",
+      upgradeName: "Cooler Axes",
+      upgradeCost: { wood: 50, stone: 50 },
+      upgradeDesc: "Something cooler goes here lmao",
+      upgradeFunction: improveSkill,
     },
   ],
-  {
-    upgradeName: "Heavy Pickaxes",
-    upgradeCost: { wood: 10, stone: 40 },
-    upgradeDesc: "Something",
-  },
-  {
-    upgradeName: "Better Crops",
-    upgradeCost: { wood: 30, stone: 15 },
-    upgradeDesc: "Sharpen all axes.",
-  },
+  [
+    {
+      upgradeName: "Cool PickAxes",
+      upgradeCost: { wood: 50, stone: 50 },
+      upgradeDesc: "Something goes here",
+      upgradeFunction: improveSkill,
+    },
+    {
+      upgradeName: "Cool PicsasdasdkAxes",
+      upgradeCost: { wood: 50, stone: 50 },
+      upgradeDesc: "Somethingasdasd goes here",
+      upgradeFunction: improveSkill,
+    },
+  ],
 ];
+
+function improveSkill(amount) {
+  const { user, setUser } = useContext(UserContext);
+  console.log(user);
+}

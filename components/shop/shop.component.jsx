@@ -6,10 +6,10 @@ import { toolupgrades } from "../../data/upgrades/upgrades";
 function Shop() {
   const [shopActive, setShopActive] = useState(false);
   const [tierOneUpgrades, setTierOneUpgrades] = useState(toolupgrades);
+  const [upgradeNumber, setUpgradeNumber] = useState(0);
 
   function handleClick() {
     setShopActive(!shopActive);
-    console.log(toolupgrades);
   }
 
   return (
@@ -32,13 +32,7 @@ function Shop() {
         <div className={styles.shopsection}>
           {tierOneUpgrades.map((item, index) => {
             return (
-              <ShopItem
-                shopActive={shopActive}
-                cost={item.upgradeCost}
-                name={item.upgradeName}
-                desc={item.upgradeDesc}
-                key={index}
-              />
+              <ShopItem shopActive={shopActive} upgrade={item} key={index} />
             );
           })}
         </div>

@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState({
     userName: "",
     resources: {
-      wood: 10,
-      stone: 0,
+      wood: 100,
+      stone: 100,
       food: 0,
     },
     upgrades: {

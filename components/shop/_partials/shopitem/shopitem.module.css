@@ -10,29 +10,18 @@
 }
 .name {
   top: 0;
+  text-align: center;
 }
 
 .canbuy {
   background-color: rgb(228, 228, 228);
   cursor: pointer;
   outline: black 2px solid;
+  min-width: 100px;
+  max-width: 100%;
 }
 
 .cannotbuy {
   background-color: rgb(150, 150, 150);
   outline: black 2px solid;
-}
-
-.price {
-}
-
-.shopitemwrapper {
-  background-color: rgb(231, 231, 231);
-  width: 100px;
-  height: 50px;
-  cursor: pointer;
-}
-
-.shopitemwrapper:hover {
-  background-color: rgb(197, 197, 197);
 }

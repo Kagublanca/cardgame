@@ -66,6 +66,7 @@ function ResourceButton({ resource }) {
 
   return (
     <div className={styles.buttonwrapper}>
+      <p id={styles.harvest}>1</p>
       <div className={styles.image}>
         <Image
           src={click ? images[0] : images[1]}

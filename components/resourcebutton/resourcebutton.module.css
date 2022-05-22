@@ -1,0 +1,29 @@
+.buttonwrapper {
+  position: relative;
+}
+
+.button {
+  font-size: 3rem;
+  border: none;
+  cursor: pointer;
+}
+
+#wood {
+  background-color: burlywood;
+  outline: 3px solid brown;
+}
+
+#stone {
+  background-color: lightgray;
+  outline: 3px solid gray;
+}
+
+#food {
+  background-color: lightgreen;
+  outline: 3px solid green;
+}
+
+.image {
+  position: absolute;
+  bottom: 100px;
+}

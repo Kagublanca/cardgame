@@ -1,0 +1,8 @@
+.resourceuiwrapper {
+  background-color: lightgray;
+  height: 50px;
+  width: 500px;
+  border-bottom-right-radius: 500px;
+  display: flex;
+  gap: 50px;
+}

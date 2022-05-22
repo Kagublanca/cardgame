@@ -27,3 +27,21 @@
   position: absolute;
   bottom: 100px;
 }
+
+@keyframes harvestnumber {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 30%;
+    transform: translateY(-50%);
+  }
+  66% {
+    opacity: 60%;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(-150%);
+  }
+}

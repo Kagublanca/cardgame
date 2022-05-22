@@ -42,7 +42,7 @@ function ResourceButton({ resource }) {
           ...user,
           resources: {
             ...user.resources,
-            wood: user.resources.wood + 1,
+            wood: user.resources.wood + user.upgrades.woodclick,
           },
         });
       case "stone":
@@ -50,7 +50,7 @@ function ResourceButton({ resource }) {
           ...user,
           resources: {
             ...user.resources,
-            stone: user.resources.stone + 1,
+            stone: user.resources.stone + user.upgrades.stoneclick,
           },
         });
       case "food":
@@ -58,7 +58,7 @@ function ResourceButton({ resource }) {
           ...user,
           resources: {
             ...user.resources,
-            food: user.resources.food + 1,
+            food: user.resources.food + user.upgrades.foodclick,
           },
         });
     }
@@ -66,7 +66,6 @@ function ResourceButton({ resource }) {
 
   return (
     <div className={styles.buttonwrapper}>
-      <p id={styles.harvest}>1</p>
       <div className={styles.image}>
         <Image
           src={click ? images[0] : images[1]}

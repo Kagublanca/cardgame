@@ -3,20 +3,13 @@ import ResourceButton from "../components/resourcebutton/resourcebutton.componen
 import Shop from "../components/shop/shop.component";
 import { useContext } from "react";
 import { UserContext } from "../usercontext";
+import ResourceUi from "../components/resourceui/resourceui.component";
 export default function Home() {
   const { user, setUser } = useContext(UserContext);
 
-  const test = {
-    a: {
-      b: 1,
-    },
-    c: {
-      d: 2,
-    },
-  };
-
   return (
     <div>
+      <ResourceUi />
       <div className={styles.test}>
         <ResourceButton resource={"wood"} />
         <ResourceButton resource={"stone"} />

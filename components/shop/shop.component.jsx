@@ -1,12 +1,15 @@
 import styles from "./shop.module.css";
 import { useState } from "react";
 import ShopItem from "./_partials/shopitem/shopitem.component";
+import { toolupgrades } from "../../data/upgrades/upgrades";
 
 function Shop() {
   const [shopActive, setShopActive] = useState(false);
+  const [tierOneUpgrades, setTierOneUpgrades] = useState(toolupgrades);
 
   function handleClick() {
     setShopActive(!shopActive);
+    console.log(toolupgrades);
   }
 
   return (
@@ -27,33 +30,17 @@ function Shop() {
       <div className={styles.shopitems}>
         <h1 className={styles.heading}>Tool Upgrades</h1>
         <div className={styles.shopsection}>
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-        </div>
-        <h1>Tool Upgrades</h1>
-        <div className={styles.shopsection}>
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-        </div>
-        <h1>Tool Upgrades</h1>
-        <div className={styles.shopsection}>
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-        </div>
-        <h1>Tool Upgrades</h1>
-        <div className={styles.shopsection}>
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
-          <ShopItem shopActive={shopActive} />
+          {tierOneUpgrades.map((item, index) => {
+            return (
+              <ShopItem
+                shopActive={shopActive}
+                cost={item.upgradeCost}
+                name={item.upgradeName}
+                desc={item.upgradeDesc}
+                key={index}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

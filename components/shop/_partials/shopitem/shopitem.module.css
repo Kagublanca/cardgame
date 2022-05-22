@@ -5,16 +5,22 @@
 }
 
 #active {
-  background-color: rgb(141, 141, 141);
-  color: rgb(211, 211, 211);
   position: relative;
+  height: 100%;
+}
+.name {
+  top: 0;
 }
 
-.name {
-  font-size: 1rem;
-  position: absolute;
-  top: 0;
-  font-family: "Kalam", cursive;
+.canbuy {
+  background-color: rgb(228, 228, 228);
+  cursor: pointer;
+  outline: black 2px solid;
+}
+
+.cannotbuy {
+  background-color: rgb(150, 150, 150);
+  outline: black 2px solid;
 }
 
 .price {

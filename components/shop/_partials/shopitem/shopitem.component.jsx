@@ -19,11 +19,32 @@ function ShopItem({ shopActive, upgrade }) {
           stone:
             user.resources.stone - upgrade[upgradeNumber].upgradeCost.stone,
         },
+        upgrades: {
+          ...user.upgrades,
+          woodclick:
+            user.upgrades.woodclick +
+            upgrade[upgradeNumber].upgradeFunction.woodImprove,
+          stoneclick:
+            user.upgrades.stoneclick +
+            upgrade[upgradeNumber].upgradeFunction.stoneImprove,
+          foodclick:
+            user.upgrades.foodclick +
+            upgrade[upgradeNumber].upgradeFunction.foodImprove,
+        },
       });
-      upgrade[upgradeNumber].upgradeFunction();
       setUpgradeNumber(upgradeNumber + 1);
     }
     return;
+  }
+
+  function improveTool(improvement) {
+    setUser({
+      ...user,
+      upgrades: {
+        ...user.upgrades,
+        woodclick: user.upgrades.woodclick + improvement,
+      },
+    });
   }
 
   return (

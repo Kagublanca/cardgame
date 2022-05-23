@@ -1,20 +1,23 @@
-import { useContext } from "react";
-import { UserContext } from "../../usercontext";
-
 export const toolupgrades = [
   [
     {
       upgradeName: "Sharp Axes",
       upgradeCost: { wood: 50, stone: 50 },
       upgradeDesc: "Something goes here",
-      upgradeFunction: improveSkill,
+      upgradeFunction: { woodImprove: 1, stoneImprove: 0, foodImprove: 0 },
     },
 
     {
       upgradeName: "Cooler Axes",
-      upgradeCost: { wood: 50, stone: 50 },
+      upgradeCost: { wood: 200, stone: 120 },
       upgradeDesc: "Something cooler goes here lmao",
-      upgradeFunction: improveSkill,
+      upgradeFunction: { woodImprove: 1, stoneImprove: 0, foodImprove: 0 },
+    },
+    {
+      upgradeName: "Even cooler Axes",
+      upgradeCost: { wood: 500, stone: 400 },
+      upgradeDesc: "Oidsjasiodjasdioj",
+      upgradeFunction: { woodImprove: 1, stoneImprove: 0, foodImprove: 0 },
     },
   ],
   [
@@ -22,18 +25,27 @@ export const toolupgrades = [
       upgradeName: "Cool PickAxes",
       upgradeCost: { wood: 50, stone: 50 },
       upgradeDesc: "Something goes here",
-      upgradeFunction: improveSkill,
+      upgradeFunction: { woodImprove: 0, stoneImprove: 1, foodImprove: 0 },
     },
     {
       upgradeName: "Cool PicsasdasdkAxes",
       upgradeCost: { wood: 50, stone: 50 },
       upgradeDesc: "Somethingasdasd goes here",
-      upgradeFunction: improveSkill,
+      upgradeFunction: { woodImprove: 0, stoneImprove: 1, foodImprove: 0 },
+    },
+    {
+      upgradeName: "Something mad",
+      upgradeCost: { wood: 200, stone: 100 },
+      upgradeDesc: "dfijsdfij",
+      upgradeFunction: { woodImprove: 0, stoneImprove: 1, foodImprove: 0 },
+    },
+  ],
+  [
+    {
+      upgradeName: "Better Crops",
+      upgradeCost: { wood: 200, stone: 100 },
+      upgradeDesc: "dfijsdfij",
+      upgradeFunction: { woodImprove: 0, stoneImprove: 0, foodImprove: 1 },
     },
   ],
 ];
-
-function improveSkill(amount) {
-  const { user, setUser } = useContext(UserContext);
-  console.log(user);
-}

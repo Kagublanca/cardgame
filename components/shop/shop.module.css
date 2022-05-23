@@ -38,11 +38,11 @@
 }
 
 #textactive:after {
-  content: ">";
+  content: "->";
 }
 
 #textinactive::after {
-  content: "<";
+  content: "<-";
 }
 
 #active {
@@ -50,7 +50,7 @@
   background-color: rgb(168, 168, 168);
   border-bottom-left-radius: 25%;
   border-top-left-radius: 10%;
-  height: 300px;
+  height: 600px;
 }
 
 #inactive {

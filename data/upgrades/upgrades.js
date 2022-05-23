@@ -55,3 +55,12 @@ export const toolupgrades = [
     },
   ],
 ];
+
+export const stickUpgrades = [
+  {
+    upgradeName: "Sharp Axes",
+    upgradeCost: { wood: 50, stone: 50 },
+    upgradeDesc: "[+1 wood collected] - A razer-sharp improvement.",
+    upgradeFunction: { woodImprove: 1, stoneImprove: 0, foodImprove: 0 },
+  },
+];

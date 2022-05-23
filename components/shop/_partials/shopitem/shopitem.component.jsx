@@ -2,6 +2,7 @@ import styles from "./shopitem.module.css";
 import { useContext } from "react";
 import { UserContext } from "../../../../usercontext";
 import { useState } from "react";
+import Image from "next/image";
 
 function ShopItem({ shopActive, upgrade }) {
   const { user, setUser } = useContext(UserContext);
@@ -37,16 +38,6 @@ function ShopItem({ shopActive, upgrade }) {
     return;
   }
 
-  function improveTool(improvement) {
-    setUser({
-      ...user,
-      upgrades: {
-        ...user.upgrades,
-        woodclick: user.upgrades.woodclick + improvement,
-      },
-    });
-  }
-
   return (
     <div
       className={
@@ -58,10 +49,16 @@ function ShopItem({ shopActive, upgrade }) {
       id={shopActive ? styles.active : styles.inactive}
       onClick={handleClick}
     >
-      <h4>{upgrade[upgradeNumber].upgradeName}</h4>
-      <p>{upgrade[upgradeNumber].upgradeCost.wood}</p>
-      <p>{upgrade[upgradeNumber].upgradeCost.stone}</p>
-      <p>{upgrade[upgradeNumber].upgradeDesc}</p>
+      <h4 className={styles.name}>{upgrade[upgradeNumber].upgradeName}</h4>
+      <div className={styles.cost}>
+        {upgrade[upgradeNumber].upgradeCost.wood}
+        <Image src={"/Clicker_1_Wood.png"} alt="Wood" width={30} height={30} />
+      </div>
+      <div className={styles.cost}>
+        {upgrade[upgradeNumber].upgradeCost.stone}
+        <Image src={"/Clicker_1_Stone.png"} alt="Wood" width={30} height={30} />
+      </div>
+      <p className={styles.desc}>{upgrade[upgradeNumber].upgradeDesc}</p>
     </div>
   );
 }

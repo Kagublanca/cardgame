@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <div>
       <ResourceUi />
+      <h1>The Hamlet of </h1>
       <div className={styles.test}>
         <ResourceButton resource={"wood"} />
         <ResourceButton resource={"stone"} />

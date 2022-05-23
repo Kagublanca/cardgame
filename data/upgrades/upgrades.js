@@ -3,7 +3,7 @@ export const toolupgrades = [
     {
       upgradeName: "Sharp Axes",
       upgradeCost: { wood: 50, stone: 50 },
-      upgradeDesc: "Something goes here",
+      upgradeDesc: "[+1 wood collected] - A razer-sharp improvement.",
       upgradeFunction: { woodImprove: 1, stoneImprove: 0, foodImprove: 0 },
     },
 
@@ -43,7 +43,13 @@ export const toolupgrades = [
   [
     {
       upgradeName: "Better Crops",
-      upgradeCost: { wood: 200, stone: 100 },
+      upgradeCost: { wood: 1, stone: 1 },
+      upgradeDesc: "dfijsdfij",
+      upgradeFunction: { woodImprove: 0, stoneImprove: 0, foodImprove: 1 },
+    },
+    {
+      upgradeName: "Vegan Crops",
+      upgradeCost: { wood: 400, stone: 150 },
       upgradeDesc: "dfijsdfij",
       upgradeFunction: { woodImprove: 0, stoneImprove: 0, foodImprove: 1 },
     },

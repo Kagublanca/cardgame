@@ -18,9 +18,9 @@
 
 .heading {
   font-family: "Kalam", cursive;
-  text-align: center;
   font-size: 1.8rem;
   text-decoration: underline;
+  width: 50%;
 }
 
 .shopitems {

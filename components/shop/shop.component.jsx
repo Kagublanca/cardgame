@@ -45,6 +45,14 @@ function Shop() {
             );
           })}
         </div>
+        <h1 className={styles.heading}>Property</h1>
+        <div className={styles.shopsection}>
+          {tierTwoUpgrades.map((item, index) => {
+            return (
+              <ShopItem shopActive={shopActive} upgrade={item} key={index} />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

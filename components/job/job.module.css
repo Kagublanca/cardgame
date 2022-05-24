@@ -63,3 +63,9 @@
   border-bottom-right-radius: 25%;
   border-top-right-radius: 25%;
 }
+
+.workerswrapper {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 30px;
+}

@@ -57,10 +57,29 @@ export const toolupgrades = [
 ];
 
 export const stickUpgrades = [
-  {
-    upgradeName: "Sharp Axes",
-    upgradeCost: { wood: 50, stone: 50 },
-    upgradeDesc: "[+1 wood collected] - A razer-sharp improvement.",
-    upgradeFunction: { woodImprove: 1, stoneImprove: 0, foodImprove: 0 },
-  },
+  [
+    {
+      upgradeName: "Better Lumberjacks",
+      upgradeCost: { wood: 250, stone: 320 },
+      upgradeDesc:
+        "[+1 wood collected via lumberjacks lumberjacks lumberjacks lumberjacks]",
+      upgradeFunction: { woodImprove: 0, stoneImprove: 0, foodImprove: 0 },
+    },
+  ],
+  [
+    {
+      upgradeName: "Better Miners",
+      upgradeCost: { wood: 250, stone: 320 },
+      upgradeDesc: "[+1 stone]",
+      upgradeFunction: { woodImprove: 0, stoneImprove: 0, foodImprove: 0 },
+    },
+  ],
+  [
+    {
+      upgradeName: "Better Farmers",
+      upgradeCost: { wood: 250, stone: 320 },
+      upgradeDesc: "[+1 food]",
+      upgradeFunction: { woodImprove: 0, stoneImprove: 0, foodImprove: 0 },
+    },
+  ],
 ];

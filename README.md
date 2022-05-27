@@ -25,6 +25,7 @@ As of now, the game only will run properly on a Desktop monitor (roughly any siz
 ### Known Bugs
 
 Well... I'm sure there are many MANY bugs at the moment. BUT the only one I can really find is when you finish an upgrade tree - the game will throw an error. This is a super simple fix, I just have not got round to it yet, but it's next on the list!
+
 ------------
 
 

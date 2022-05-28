@@ -98,27 +98,31 @@ function ShopItem({ image, worker, job }) {
         <div>
           <Image src={image} alt="Something" width={50} height={50} />
         </div>
-        <p>x{worker}</p>
+        <p>x{job == "unemployed" ? user.workers.unemployed : worker}</p>
       </div>
       <div className={styles.buttonwrapper}>
-        <button
-          className={styles.button}
-          id={styles.minus}
-          onClick={() => {
-            addWorker(job, "minus");
-          }}
-        >
-          -
-        </button>
-        <button
-          className={styles.button}
-          id={styles.plus}
-          onClick={() => {
-            addWorker(job, "add");
-          }}
-        >
-          +
-        </button>
+        {job == "unemployed" ? null : (
+          <button
+            className={styles.button}
+            id={styles.minus}
+            onClick={() => {
+              addWorker(job, "minus");
+            }}
+          >
+            -
+          </button>
+        )}
+        {job == "unemployed" ? null : (
+          <button
+            className={styles.button}
+            id={styles.plus}
+            onClick={() => {
+              addWorker(job, "add");
+            }}
+          >
+            +
+          </button>
+        )}
       </div>
     </div>
   );

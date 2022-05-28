@@ -69,7 +69,12 @@ function ResourceUi() {
             width={50}
             height={50}
           />
-          <p>{user.workers.unemployed}</p>
+          <p>
+            {user.workers.unemployed +
+              user.workers.lumber +
+              user.workers.miner +
+              user.workers.farmer}
+          </p>
         </div>
       </div>
     </div>

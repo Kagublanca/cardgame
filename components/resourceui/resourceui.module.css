@@ -1,9 +1,25 @@
+.uiwrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .resourceuiwrapper {
   background-color: lightgray;
   height: 50px;
-  width: 100%;
+  width: 40%;
   display: flex;
   gap: 50px;
+  border-end-end-radius: 50px;
+}
+.propertyuiwrapper {
+  background-color: lightgray;
+  height: 50px;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  padding-right: 30px;
+  border-end-start-radius: 50px;
 }
 
 .resource {

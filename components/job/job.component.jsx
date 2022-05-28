@@ -34,17 +34,17 @@ function Job() {
           <ShopItem
             image={"/Clicker_1_Stick.png"}
             worker={user.workers.lumber}
-            job={"Lumber"}
+            job={"lumber"}
           />
           <ShopItem
             image={"/Clicker_1_Stick.png"}
             worker={user.workers.miner}
-            job={"Lumber"}
+            job={"miner"}
           />
           <ShopItem
             image={"/Clicker_1_Stick.png"}
             worker={user.workers.farmer}
-            job={"Lumber"}
+            job={"farmer"}
           />
           <ShopItem image={"/Clicker_1_Stick.png"} worker={0} />
           <ShopItem image={"/Clicker_1_Stick.png"} worker={0} />

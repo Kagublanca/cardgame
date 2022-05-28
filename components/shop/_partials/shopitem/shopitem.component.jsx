@@ -32,6 +32,12 @@ function ShopItem({ shopActive, upgrade }) {
             user.upgrades.foodclick +
             upgrade[upgradeNumber].upgradeFunction.foodImprove,
         },
+        property: {
+          ...user.property,
+          house:
+            user.property.house +
+            upgrade[upgradeNumber].upgradeFunction.houseImprove,
+        },
       });
       setUpgradeNumber(upgradeNumber + 1);
     }

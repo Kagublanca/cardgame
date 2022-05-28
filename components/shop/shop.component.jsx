@@ -1,12 +1,17 @@
 import styles from "./shop.module.css";
 import { useState } from "react";
 import ShopItem from "./_partials/shopitem/shopitem.component";
-import { toolupgrades, stickUpgrades } from "../../data/upgrades/upgrades";
+import {
+  toolupgrades,
+  stickUpgrades,
+  propertyUpgrades,
+} from "../../data/upgrades/upgrades";
 
 function Shop() {
   const [shopActive, setShopActive] = useState(false);
   const [tierOneUpgrades, setTierOneUpgrades] = useState(toolupgrades);
   const [tierTwoUpgrades, setTierTwoUpgrades] = useState(stickUpgrades);
+  const [tierThreeUpgrades, setTierThreeUpgrades] = useState(propertyUpgrades);
   const [upgradeNumber, setUpgradeNumber] = useState(0);
 
   function handleClick() {
@@ -47,7 +52,7 @@ function Shop() {
         </div>
         <h1 className={styles.heading}>Property</h1>
         <div className={styles.shopsection}>
-          {tierTwoUpgrades.map((item, index) => {
+          {tierThreeUpgrades.map((item, index) => {
             return (
               <ShopItem shopActive={shopActive} upgrade={item} key={index} />
             );

@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       foodclick: 1,
     },
     workers: {
-      unemployed: 0,
+      unemployed: 50,
       lumber: 0,
       miner: 0,
       farmer: 0,

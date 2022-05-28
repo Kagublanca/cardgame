@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import { UserContext } from "../usercontext";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState({
@@ -17,6 +17,7 @@ function MyApp({ Component, pageProps }) {
     },
     workers: {
       unemployed: 50,
+      cap: 0,
       lumber: 0,
       miner: 0,
       farmer: 0,

@@ -74,6 +74,7 @@ function ResourceUi() {
               user.workers.lumber +
               user.workers.miner +
               user.workers.farmer}
+            / {user.workers.cap}
           </p>
         </div>
       </div>

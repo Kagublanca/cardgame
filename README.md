@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ # Clicker Game
 
-## Getting Started
+ A game where the point is to click... a lot. Sounds super fun right...? Right!
 
-First, run the development server:
+------------
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### What is it?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Starting out as a small project I was tinkering with whilst on SoC, I have now began to make it playable and a lot more polished. The premise is simple. You are in charge of a kingdom of stick people. You must improve your kingdom in order to gain unseen riches - or else it shall fall.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+------------
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+### How to use
 
-To learn more about Next.js, take a look at the following resources:
+You must use the resource buttons at the bottom of the display in order to harvest resources (who would've thought right?) in order to purchase upgrades to increase throughput and population cap of your kingdom. The game is still super early in development, but I really enjoy working on it, so I would expect it to be finished within about two weeks or so! :)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+As of now, the game only will run properly on a Desktop monitor (roughly any size).  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+------------
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Known Bugs
+
+Well... I'm sure there are many MANY bugs at the moment. BUT the only one I can really find is when you finish an upgrade tree - the game will throw an error. This is a super simple fix, I just have not got round to it yet, but it's next on the list!
+
+------------
+
+
+
+### What next?
+
+Being able to add and take away stick people from their job and place them into another is the thing I am currently working on.
+
+Make it responsive... so you know... the huge majority of people who look at this can actually use it. (Whoops).
+
+Ideally - I would like to add a threat. I.e some form of combat system where you battle some goblins or something realistic like that. 
+
+------------
+
+
+

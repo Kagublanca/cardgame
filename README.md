@@ -32,7 +32,7 @@ Well... I'm sure there are many MANY bugs at the moment. BUT the only one I can 
 
 ### What next?
 
-Being able to add and take away stick people from their job and place them into another is the thing I am currently working on.
+Ensuring you get the correct resource amount from every "tick" from a global setInterval for all the stick workers.
 
 Make it responsive... so you know... the huge majority of people who look at this can actually use it. (Whoops).
 
